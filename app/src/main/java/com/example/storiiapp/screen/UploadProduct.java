@@ -167,11 +167,9 @@ public class UploadProduct extends AppCompatActivity {
                 imageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                     @Override
                     public void onSuccess(Uri uri) {
-                        //String key = databaseReference.push().getKey();
-                        int count = 0;
-                        String productId = "s" + (count + 1);
-                        Product product = new Product(productId, name, descripttion, uri.toString(), price, oldPrice, "40", "0", "0", getDataRadio());
-                        databaseReference.child(productId).setValue(product);
+                        String key = databaseReference.push().getKey();
+                        Product product = new Product(key, name, descripttion, uri.toString(), price, oldPrice, "40", "0", "0", getDataRadio());
+                        databaseReference.child(key).setValue(product);
                         progressBar.setVisibility(View.INVISIBLE);
                         Toast.makeText(UploadProduct.this, "Đăng sản phẩm thành công", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(UploadProduct.this, ProductRecyclerView.class);

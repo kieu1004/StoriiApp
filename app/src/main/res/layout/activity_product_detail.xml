@@ -525,7 +525,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_margin="8dp"
                 android:layout_weight="0.5"
-                android:background="@drawable/d_background_normal_13"
+                android:background="@color/primary_normal"
                 android:gravity="center"
                 android:text="Thêm vào giỏ"
                 android:textColor="@color/white"
