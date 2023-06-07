@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame_layout_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+
+        <!--        Header        -->
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingHorizontal="8dp"
+
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:scaleX="1.0"
+                android:scaleY="1.0"
+                app:srcCompat="@drawable/a_storii_icon" />
+
+            <LinearLayout
+                android:id="@+id/liner_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="6dp"
+                android:layout_marginVertical="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/d_search_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_searchButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:ems="8"
+                    android:paddingStart="12sp"
+                    android:text="Search"
+                    android:textSize="13sp"
+                    tools:ignore="HardcodedText,NestedWeights,RtlSymmetry" />
+
+                <ImageView
+                    android:id="@+id/img_search"
+                    android:layout_width="12dp"
+                    android:layout_height="32dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/d_search_btn_background"
+                    android:paddingVertical="4dp"
+                    android:scaleType="fitCenter"
+                    android:scaleX="1"
+                    android:scaleY="1"
+                    app:srcCompat="@drawable/i_search_icon" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/cartBtn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:scaleX="0.55"
+                android:scaleY="0.55"
+                app:srcCompat="@drawable/i_cart_line" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="6dp"
+                    tools:ignore="UselessParent">
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:background="@drawable/d_slider_corner"
+                        android:clipToOutline="true"
+                        tools:ignore="UnusedAttribute" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/background"
+                    android:paddingHorizontal="4dp"
+                    android:paddingVertical="6dp">
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="DANH MỤC NỔI BẬT"
+                        android:textColor="@color/primary_bold"
+                        android:layout_marginTop="1dp"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:scrollbars="none">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout_gridtableLayout"
+                                android:layout_width="780dp"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                tools:ignore="UselessParent">
+
+                                <GridView
+                                    android:id="@+id/gridviewCategory"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="6dp"
+                                    android:layout_marginVertical="4dp"
+                                    android:background="@color/white"
+                                    android:columnWidth="110dp"
+                                    android:gravity="center"
+                                    android:numColumns="10"
+                                    android:scrollbarAlwaysDrawHorizontalTrack="true"
+                                    android:scrollbarAlwaysDrawVerticalTrack="true"
+                                    android:scrollbars="none"
+                                    android:stretchMode="none"
+                                    tools:ignore="NestedScrolling" />
+                            </LinearLayout>
+                        </FrameLayout>
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="4dp"
+                    android:paddingVertical="6dp">
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="GỢI Ý"
+                        android:textColor="@color/primary_bold"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <com.example.storiiapp.ExpandableGridView
+                        android:id="@+id/gridView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/background"
+                        android:gravity="fill"
+                        android:numColumns="2"
+                        android:padding="5dp"
+                        android:stretchMode="columnWidth"
+                        tools:ignore="NestedScrolling" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@drawable/d_line_horizontal"
+            app:layout_constraintTop_toBottomOf="@id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

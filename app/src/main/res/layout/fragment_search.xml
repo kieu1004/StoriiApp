@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.SearchFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/edt_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="6dp"
+            android:background="@drawable/d_light_boder"
+            android:focusable="false"
+            app:closeIcon="@drawable/baseline_clear_24"
+            app:iconifiedByDefault="false"
+            app:queryHint="Tìm kiếm..."
+            app:searchHintIcon="@null"
+            android:theme="@style/AppSearchView"
+            app:searchIcon="@drawable/i_search_icon_green" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <RadioGroup
+                android:id="@+id/rdg_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:id="@+id/rd_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radio_flat_selector"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="12dp"
+                    android:text="Cùng loại"
+                    android:textSize="12sp"
+                    android:textColor="@drawable/radio_flat_text_selector"
+                    tools:ignore="HardcodedText" />
+
+                <RadioButton
+                    android:id="@+id/rd_popular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radio_flat_selector"
+                    android:button="@android:color/transparent"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="12dp"
+                    android:text="Phổ Biến"
+                    android:textSize="12sp"
+                    android:textColor="@drawable/radio_flat_text_selector"
+                    tools:ignore="HardcodedText" />
+
+                <RadioButton
+                    android:id="@+id/rd_selling"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radio_flat_selector"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:padding="-1dp"
+                    android:paddingHorizontal="12dp"
+                    android:text="Bán Chạy"
+                    android:textSize="12sp"
+                    android:textColor="@drawable/radio_flat_text_selector"
+                    tools:ignore="HardcodedText" />
+
+                <RadioButton
+                    android:id="@+id/rd_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radio_flat_selector"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="12dp"
+                    android:text="Giảm Giá"
+                    android:textSize="12sp"
+                    android:textColor="@drawable/radio_flat_text_selector"
+                    tools:ignore="HardcodedText" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/gv_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:gravity="fill"
+            android:numColumns="2"
+            android:paddingTop="1dp"
+            android:paddingHorizontal="5dp"
+            android:stretchMode="columnWidth" />
+
+    </LinearLayout>
+
+</FrameLayout>

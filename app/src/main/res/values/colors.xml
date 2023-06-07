@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- StoriiApp -->
+    <color name="primary_backgroud">#F6F2EA</color>
+    <color name="primary_light">#C8B6A6</color>
+    <color name="primary_normal">#A4907C</color>
+    <color name="primary_bold">#8D7B68</color>
+    <color name="heart_like">#CB4646</color>
+    <color name="heart_unlike">#00000000</color>
+    <color name="banner_sale">#609966</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="background">#f5f5f5</color>
+    <color name="delete">#F44336</color>
+    <color name="yellow_star">#fdd836</color>
+    <color name="yellow_star_transparent">#59fdd836</color>
+    <color name="text_fuzz3">#333</color>
+    <color name="text_fuzz7">#777</color>
+    <color name="text_fuzz6">#666</color>
+</resources>

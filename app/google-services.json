@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "898407609090",
+    "project_id": "storiiapp-ffb73",
+    "storage_bucket": "storiiapp-ffb73.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:898407609090:android:ce147e735d6e1c34d3081b",
+        "android_client_info": {
+          "package_name": "com.example.storiiapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "898407609090-5uhcssosqdr0enp85mkljflodskjppj9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl0UFbSWedLuVS3L3IJZ70ljUjJbMCOqQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "898407609090-5uhcssosqdr0enp85mkljflodskjppj9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

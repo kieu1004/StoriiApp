@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screen.ProductDetail">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/CardViewCart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background"
+            android:orientation="vertical">
+
+            <!-- Product Container-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <!-- Product Img  -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="24dp"
+                    android:orientation="horizontal"
+                    app:cardCornerRadius="13dp"
+                    app:cardElevation="8dp">
+
+                    <ImageView
+                        android:id="@+id/img_detailproduct"
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="32dp"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/pddemo" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- Product Detail -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="32dp"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/txt_detailName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="2dp"
+                        android:text="CD Album Truyên Ngắn"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        tools:ignore="HardcodedText" />
+
+                    <!-- Eval & Star    -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="8dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.7"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txt_detailStar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:text="4.9"
+                                android:textColor="@color/primary_normal"
+                                android:textSize="13sp"
+                                tools:ignore="HardcodedText" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/baseline_star_24" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txt_detailReview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:text="87"
+                                android:textColor="@color/primary_bold"
+                                android:textSize="13sp"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:paddingStart="5dp"
+                                android:text="Đánh Giá"
+                                android:textColor="@color/text_fuzz6"
+                                android:textSize="13sp"
+                                tools:ignore="HardcodedText,RtlSymmetry" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txt_detailSold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:text="176"
+                                android:textColor="@color/primary_bold"
+                                android:textSize="13sp"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:paddingStart="5dp"
+                                android:text="Đã Bán"
+                                android:textColor="@color/text_fuzz6"
+                                android:textSize="13sp"
+                                tools:ignore="HardcodedText,RtlSymmetry" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <!-- Price -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/d_background_gray_13"
+                        android:paddingHorizontal="4dp"
+                        android:paddingVertical="4dp">
+
+                        <TextView
+                            android:id="@+id/txt_detailPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="20dp"
+                            android:paddingTop="12dp"
+                            android:paddingEnd="8dp"
+                            android:paddingBottom="8dp"
+                            android:text="320.000"
+                            android:textColor="@color/primary_bold"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/textView16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="14dp"
+                            android:text="₫"
+                            android:textColor="@color/primary_bold"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toEndOf="@+id/txt_detailPrice"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/txt_oldPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="20dp"
+                            android:paddingTop="0dp"
+                            android:paddingEnd="6dp"
+                            android:paddingBottom="12dp"
+                            android:text="350.000 ₫"
+                            android:textColor="@color/text_fuzz6"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txt_detailPrice"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/txt_salePrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="60dp"
+                            android:paddingTop="20dp"
+                            android:text="-50%"
+                            android:textColor="@color/primary_light"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toEndOf="@+id/textView16"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="HardcodedText,RtlSymmetry" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!-- Info Trifarm -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:layout_gravity="center"
+                                    app:srcCompat="@drawable/i_feather" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingVertical="2dp"
+                                    android:paddingStart="8dp"
+                                    android:text="Nghệ thuật và sáng tạo"
+                                    android:textColor="@color/text_fuzz6"
+                                    android:textSize="12sp"
+                                    tools:ignore="HardcodedText,RtlSymmetry" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:layout_gravity="center"
+                                    app:srcCompat="@drawable/i_truck" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingVertical="2dp"
+                                    android:paddingStart="8dp"
+                                    android:text="Giao miễn phí"
+                                    android:textColor="@color/text_fuzz6"
+                                    android:textSize="12sp"
+                                    tools:ignore="HardcodedText,RtlSymmetry" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Product Detail Container -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingVertical="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:paddingVertical="4dp"
+                    android:text="MÔ TẢ SẢN PHẨM"
+                    android:textColor="@color/primary_bold"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/txt_detailName2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineHeight="20dp"
+                    android:paddingHorizontal="24dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:text="CD Album Truyện Ngắn"
+                    android:textColor="@color/text_fuzz3"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText,UnusedAttribute" />
+
+                <TextView
+                    android:id="@+id/txt_detailDes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineHeight="20dp"
+                    android:paddingHorizontal="24dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="12dp"
+                    android:text="Trong mỗi CD album “Truyện Ngắn” bạn sẽ được tặng kèm một mã QR code để nhận thêm digital album và thưởng thức ngay trên app STORII cũng như các nội dung độc quyền khác: Movie Truyện Ngắn,..."
+                    android:textColor="@color/text_fuzz3"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText,UnusedAttribute" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineHeight="20dp"
+                    android:paddingHorizontal="24dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:text="Chính sách Storii"
+                    android:textColor="@color/text_fuzz3"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText,UnusedAttribute" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineHeight="20dp"
+                    android:paddingHorizontal="24dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="3dp"
+                    android:text="Các giá thành sản phẩm dịch vụ trên Storii đã bao gồm thuế VAT."
+                    android:textColor="@color/text_fuzz3"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText,UnusedAttribute" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineHeight="20dp"
+                    android:paddingHorizontal="24dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="3dp"
+                    android:text="Storii có quyền cập nhật và thay đổi các giá gói dịch vụ tùy từng thời điểm. Việc thay đổi mức giá sẽ có hiệu lực vào thời điểm bạn bắt đầu đăng ký sử dụng dịch vụ tiếp theo sau ngày thay đổi mức phí. Khi tiếp tục trải nghiệm dịch vụ và thực hiện giao dịch, bạn đã đồng ý chấp nhận mức giá mới sau khi mức giá này có hiệu lực.Storii không có trách nhiệm hoàn trả tiền dịch vụ sau khi người dùng đã thanh toán (mọi trường hợp đặc biệt khác sẽ được quy định riêng)"
+                    android:textColor="@color/text_fuzz3"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText,UnusedAttribute" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineHeight="20dp"
+                    android:paddingHorizontal="24dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="12dp"
+                    android:text="Các sản phẩm, dịch vụ trên Storii được thanh toán trực tuyến qua các kênh thanh toán của Payoo. Đối với trường hợp phát sinh lỗi khi thanh toán, thành viên có nghĩa vụ thông báo và cung cấp các chứng từ xác minh cho giao dịch thanh toán cho Payoo để kiểm tra và xử lý. Cụ thể là các trường hợp lỗi phát sinh từ phía Payoo, ngân hàng hoặc thẻ của thành viên."
+                    android:textColor="@color/text_fuzz3"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText,UnusedAttribute" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingVertical="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:paddingVertical="4dp"
+                    android:text="ĐÁNH GIÁ KHÁCH HÀNG"
+                    android:textColor="@color/primary_bold"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <com.example.storiiapp.ExpandableGridView
+                    android:id="@+id/gridViewCmtDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="12dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:numColumns="1"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="0dp" />
+
+                <TextView
+                    android:id="@+id/btn_see_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/d_search_background"
+                    android:paddingHorizontal="64dp"
+                    android:paddingVertical="4dp"
+                    android:text="Xem tất cả"
+                    android:textColor="@color/primary_normal"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Add To Cart-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardViewCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingHorizontal="6dp">
+
+            <!--  -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="6dp"
+                android:background="@drawable/d_search_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/btn_minus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/txt_quantity"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/baseline_remove_24" />
+
+                <TextView
+                    android:id="@+id/txt_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/d_square_line_background"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="7dp"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_fuzz3"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
+
+                <ImageView
+                    android:id="@+id/btn_plus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txt_quantity"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/baseline_add_24_black" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- AddToCart Button -->
+            <Button
+                android:id="@+id/btn_addCart"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="8dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/d_background_normal_13"
+                android:gravity="center"
+                android:text="Thêm vào giỏ"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

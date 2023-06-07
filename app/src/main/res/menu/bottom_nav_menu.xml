@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Trang chủ"
+        android:id="@+id/home"
+        android:icon="@drawable/i_home_solid" />
+    <item android:title="Tìm kiếm"
+        android:id="@+id/search"
+        android:icon="@drawable/i_search_solid" />
+    <item android:title="Giỏ hàng"
+        android:id="@+id/cart"
+        android:icon="@drawable/i_cart_solid" />
+    <item android:title="Tài khoản"
+        android:id="@+id/profile"
+        android:icon="@drawable/i_user_solid" />
+</menu>
